@@ -1,0 +1,19 @@
+<!-- Функция, показывающая содержимое элемента при активации чек-бокса -->
+<script language="JavaScript"> //* Необходимо подключать jquery */
+$(document).ready(function(){
+ $("input#no_answer").change(function(){
+  if ($(this).prop('checked')) {
+        $('#create_sr').fadeIn().show();
+
+  } else {
+      $('#create_sr').fadeOut(300); 
+  }
+  });
+});
+</script>
+<!-- Сам чек-бокс и скрытый элемент -->
+<input type="checkbox" id="no_answer" > Наименование чек-бокса
+
+<div id="create_sr" style="display:none">
+Текст скрытого элемента.Ы
+</div>
