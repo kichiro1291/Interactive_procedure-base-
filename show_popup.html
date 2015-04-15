@@ -1,0 +1,62 @@
+<!--Стили окна -->
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 99999;
+		-webkit-transition: opacity .5s;
+		-moz-transition: opacity .5s;
+		-ms-transition: opacity .5s;
+		-o-transition: opacity .5s;
+		transition: opacity .5s;
+}
+.popup {
+	background-color: #fff;
+	border: 3px solid #fff;
+	display: inline-block;
+	left: 50%;
+	opacity: 0;
+	padding: 15px;
+	width: 1550px;
+	height: 250px;
+	position: fixed;
+	text-align: justify;
+	top: 40%;
+	visibility: hidden;
+	z-index: 999999;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: opacity .5s, top .5s;
+	-moz-transition: opacity .5s, top .5s;
+	-ms-transition: opacity .5s, top .5s;
+	-o-transition: opacity .5s, top .5s;
+	transition: opacity .5s, top .5s;
+
+}
+<!--Функция запуска -->
+$(document).ready(function(){
+			$('.popup .close_window, .overlay').click(function (){
+				$('.popup, .overlay').css({'opacity':'0', 'visibility':'hidden'});
+			});
+			$('a.open_window').click(function (e){
+				$('.popup, .overlay').css({'opacity':'1', 'visibility':'visible'});
+				e.preventDefault();
+			});
+		});
+<!-- div-элемент и ссыкла для клика  -->
+<a class="open_window" href="#">Нажать, чтобы открыть окно</a>
+
+<div class="overlay"></div>
+<div class="popup">
+Содержание окна		
+</ol>
+</div>
