@@ -1,4 +1,4 @@
-/*таблица с инструкцией*/	
+﻿/*таблица с инструкцией*/	
 	table.main_table
 	{
 	width: 100%;	
@@ -17,11 +17,7 @@
 	{
 	border: 1px solid #EC9314;
 	}
-	table.params
-	{
-	width: 100%;	
-	border: 0px;
-	}	
+	
 /* Pop Up */
 
 .overlay {
