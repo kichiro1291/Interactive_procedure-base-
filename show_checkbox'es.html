@@ -1,0 +1,30 @@
+<!--Функция, которая показывает элемент в зависимости от выбранного чек-бокса-->
+<script type="text/javascript">
+	 $(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).attr("value")=="in_1"){
+                $(".in_1").toggle();
+            }
+            if($(this).attr("value")=="in_2"){
+                $(".in_2").toggle();
+            }
+            if($(this).attr("value")=="in_3"){
+                $(".in_3").toggle();
+            }         
+        });
+    });
+</script>
+<!--Задаем чек-боксы-->
+<input type="checkbox" value="in_1">Checkbox №1 <br />
+<input type="checkbox" value="in_2">Checkbox №2 <br />
+<input type="checkbox" value="in_3">Checkbox №3 <br />
+<!--Задаем div-элементы, которые нужно скрыть-->
+<div class="in_1" style="display:none">
+1	
+</div>
+<div class="in_2" style="display:none" >
+	2
+</div>
+<div class="in_3" style="display:none">
+	3
+</div>
